@@ -36,7 +36,7 @@ function render(variables = {}) {
           <h1>${variables.name} ${variables.lastname}</h1>
           <h2>${variables.role}</h2>
           <h3>${variables.city}, ${variables.country}</h3>
-          <ul class="position-right">
+          <ul class="${variables.socialMediaPosition}">
             <li><i class="bi bi-twitter"></i> ${variables.twitter}</li><br>
             <li><i class="bi bi-github"></i> ${variables.github}</li><br>
             <li><i class="bi bi-linkedin"></i> ${variables.linkedin}</li><br>
@@ -62,15 +62,15 @@ window.onload = function() {
     // social media bar position (left or right)
     socialMediaPosition: "position-left",
     // social media usernames
-    twitter: null,
-    github: null,
-    linkedin: null,
-    instagram: null,
-    name: null,
-    lastname: null,
-    role: null,
-    country: null,
-    city: null
+    twitter: "",
+    github: "",
+    linkedin: "",
+    instagram: "",
+    name: "Name",
+    lastname: "Last name",
+    role: "role",
+    country: "Country",
+    city: "City"
   };
   render(window.variables); //render the card for the first time
 
